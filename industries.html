@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Industries We Serve | MS Scientific</title>
+<meta name="description" content="MS Scientific supplies good-quality diesel to construction, transport, manufacturing, agriculture, mining and power generation. Reliable, compliant and on time. Call 073 271 0004.">
+<meta property="og:title" content="MS Scientific | Diesel Supply">
+<meta property="og:description" content="Reliable diesel supply for your business. Good quality, compliance to regulations, high professionalism.">
+<meta property="og:image" content="img/truck.jpg">
+<meta name="theme-color" content="#0c2340">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0c2340; --navy-2:#13325a; --navy-3:#071629;
+  --green:#4f9d2d; --green-2:#6cbf3f; --teal:#1aa3b8;
+  --ink:#16202c; --muted:#5b6878; --line:#e3e8ee; --bg:#ffffff; --soft:#f3f6f9;
+  --radius:16px; --shadow:0 18px 40px -18px rgba(12,35,64,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+h1,h2,h3,.cond{font-family:"Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.01em;line-height:1.02}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}
+.eyebrow::before{content:"";width:28px;height:3px;background:var(--green);border-radius:2px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:.95rem;transition:transform .15s,box-shadow .15s,background .15s;border:2px solid transparent;cursor:pointer;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 10px 24px -10px rgba(79,157,45,.8)}
+.btn-green:hover{background:var(--green-2);transform:translateY(-2px)}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2);transform:translateY(-2px)}
+
+/* top bar + nav */
+.topbar{background:var(--navy-3);color:#c7d3e2;font-size:.82rem}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding:8px 0;flex-wrap:wrap}
+.topbar a:hover{color:#fff}
+.topbar span{display:inline-flex;align-items:center;gap:6px}
+.topbar svg{width:14px;height:14px;color:var(--green-2)}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand img{height:58px;width:auto}
+nav.menu{display:flex;align-items:center;gap:30px;font-weight:600;font-size:.93rem}
+nav.menu a:not(.btn){color:var(--navy);position:relative}
+nav.menu a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--green);transition:width .2s}
+nav.menu a:not(.btn):hover::after{width:100%}
+.burger{display:none;background:none;border:0;cursor:pointer;color:var(--navy)}
+.burger svg{width:30px;height:30px}
+
+/* hero */
+.hero{position:relative;background:radial-gradient(1200px 600px at 85% 20%,#1b4677 0%,transparent 60%),linear-gradient(135deg,var(--navy-3),var(--navy) 55%,var(--navy-2));color:#fff;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:8px;background:linear-gradient(90deg,var(--green) 0 30%,var(--navy-2) 30% 100%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:84px 0 96px}
+.hero h1{font-size:clamp(3.4rem,8vw,6.4rem);font-weight:800}
+.hero h1 span{color:var(--green-2);display:block}
+.hero .tag{display:inline-block;margin:22px 0 18px;background:#fff;color:var(--navy);font-family:"Barlow Condensed";font-weight:700;font-size:1.3rem;letter-spacing:.04em;text-transform:uppercase;padding:8px 18px;clip-path:polygon(4% 0,100% 0,96% 100%,0 100%)}
+.hero p.lead{color:#c9d6e6;font-size:1.08rem;max-width:520px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.hero-media{position:relative}
+.hero-media .frame{border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7);border:1px solid rgba(255,255,255,.12)}
+.hero-media img{aspect-ratio:546/422;object-fit:cover;width:100%;height:auto}
+.wrap>*{min-width:0}
+.badge{position:absolute;left:-26px;bottom:-26px;background:#fff;color:var(--navy);border-radius:16px;padding:16px 20px;display:flex;gap:14px;align-items:center;box-shadow:var(--shadow)}
+.badge .ic{width:46px;height:46px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:#fff;flex:none}
+.badge .ic svg{width:24px;height:24px}
+.badge b{font-family:"Barlow Condensed";font-size:1.35rem;text-transform:uppercase;display:block;line-height:1}
+.badge small{color:var(--muted);font-size:.8rem}
+
+/* pillars */
+.pillars{margin-top:-1px;background:var(--soft);border-bottom:1px solid var(--line)}
+.pillars .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.pillar{display:flex;align-items:center;gap:18px;padding:30px 24px}
+.pillar+.pillar{border-left:1px solid var(--line)}
+.check{width:58px;height:58px;border-radius:50%;border:3px solid var(--navy);display:grid;place-items:center;flex:none;background:#fff}
+.check span{width:40px;height:40px;border-radius:50%;background:var(--green);display:grid;place-items:center;color:#fff}
+.check svg{width:22px;height:22px}
+.pillar h3{font-size:1.5rem;color:var(--navy)}
+.pillar p{color:var(--muted);font-size:.9rem;line-height:1.45}
+
+section{padding:96px 0}
+.head{max-width:680px;margin-bottom:52px}
+.head h2{font-size:clamp(2.3rem,4.5vw,3.4rem);color:var(--navy);margin:12px 0 14px}
+.head h2 em{font-style:normal;color:var(--green)}
+.head p{color:var(--muted);font-size:1.05rem}
+.center{text-align:center;margin-inline:auto}
+.center .eyebrow::after{content:"";width:28px;height:3px;background:var(--green);border-radius:2px}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-card{background:linear-gradient(160deg,var(--navy),var(--navy-2));color:#fff;border-radius:24px;padding:44px;position:relative;overflow:hidden}
+.about-card::before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:30px solid rgba(108,191,63,.15)}
+.about-card .drop{width:74px;height:74px;border-radius:50%;background:#fff;display:grid;place-items:center;margin-bottom:24px}
+.about-card .drop svg{width:38px;height:38px}
+.about-card h3{font-size:2rem;margin-bottom:12px}
+.about-card h3 span{color:var(--green-2)}
+.about-card p{color:#c9d6e6}
+.about-card .line{display:flex;gap:10px;margin-top:26px;font-family:"Barlow Condensed";font-weight:700;font-size:1.25rem;text-transform:uppercase;color:var(--green-2)}
+.ticks{list-style:none;display:grid;gap:14px;margin-top:26px}
+.ticks li{display:flex;gap:12px;align-items:flex-start}
+.ticks li svg{width:22px;height:22px;color:var(--green);flex:none;margin-top:2px}
+
+/* industries */
+.industries{background:var(--soft)}
+.grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ind{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden}
+.ind::after{content:"";position:absolute;left:0;bottom:0;height:4px;width:0;background:var(--green);transition:width .3s}
+.ind:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.ind:hover::after{width:100%}
+.ind .ico{width:72px;height:72px;border-radius:50%;background:var(--navy);border:3px solid #fff;outline:2px solid var(--green);display:grid;place-items:center;color:#fff;margin-bottom:20px}
+.ind .ico svg{width:36px;height:36px}
+.ind h3{font-size:1.55rem;color:var(--navy);margin-bottom:8px}
+.ind p{color:var(--muted);font-size:.95rem}
+
+/* banner */
+.banner{background:var(--navy);color:#fff;padding:34px 0;position:relative;overflow:hidden}
+.banner::before,.banner::after{content:"";position:absolute;top:0;bottom:0;width:60px;background:var(--green)}
+.banner::before{left:-30px;transform:skewX(-20deg)}
+.banner::after{right:-30px;transform:skewX(-20deg)}
+.banner p{text-align:center;font-family:"Barlow Condensed";font-weight:700;font-size:clamp(1.5rem,3.4vw,2.4rem);text-transform:uppercase;letter-spacing:.02em}
+.banner p span{color:var(--green-2)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+.step{padding:30px 26px;border-radius:var(--radius);border:1px solid var(--line);position:relative}
+.step::before{counter-increment:s;content:"0" counter(s);font-family:"Barlow Condensed";font-weight:800;font-size:3.4rem;color:transparent;-webkit-text-stroke:1.5px var(--green);line-height:1;display:block;margin-bottom:14px}
+.step h3{font-size:1.4rem;color:var(--navy);margin-bottom:6px}
+.step p{color:var(--muted);font-size:.93rem}
+
+/* safety */
+.safety{background:linear-gradient(135deg,var(--navy-3),var(--navy));color:#fff}
+.safety .wrap{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.shield{width:220px}
+.safety h2{font-size:clamp(2.3rem,4.5vw,3.4rem);margin:12px 0 16px}
+.safety h2 span{color:var(--green-2)}
+.safety p{color:#c9d6e6;max-width:640px}
+.chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-weight:600;font-size:.9rem}
+.chip svg{width:18px;height:18px;color:var(--green-2)}
+
+/* quote / contact */
+.contact .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.cinfo h2{font-size:clamp(2.6rem,5vw,3.8rem);color:var(--navy);margin:12px 0 10px}
+.cinfo h2::after{content:"";display:block;width:90px;height:5px;background:var(--green);margin-top:14px;border-radius:3px}
+.cinfo>p{color:var(--muted);margin:18px 0 28px}
+.clist{display:grid;gap:14px}
+.citem{display:flex;align-items:center;gap:16px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;transition:border-color .2s,background .2s}
+.citem:hover{border-color:var(--green);background:#f6fbf3}
+.citem .ci{width:46px;height:46px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;flex:none}
+.citem .ci svg{width:22px;height:22px}
+.citem small{display:block;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+.citem b{font-size:1.08rem;color:var(--navy);word-break:break-all}
+form.quote{background:#fff;border:1px solid var(--line);border-radius:24px;padding:38px;box-shadow:var(--shadow)}
+form.quote h3{font-size:2rem;color:var(--navy)}
+form.quote>p{color:var(--muted);font-size:.93rem;margin:4px 0 24px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.field label{font-weight:600;font-size:.85rem;color:var(--navy)}
+.field input,.field select,.field textarea{font:inherit;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--soft);color:var(--ink);transition:border-color .2s,background .2s;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--green);background:#fff}
+.field textarea{min-height:96px;resize:vertical}
+.fbtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.fbtns .btn{flex:1;justify-content:center}
+.note{font-size:.8rem;color:var(--muted);margin-top:14px}
+
+/* footer */
+footer{background:var(--navy-3);color:#aebcd0;padding-top:64px;font-size:.93rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:48px}
+.flogo{background:#fff;border-radius:14px;padding:12px 16px;display:inline-block;margin-bottom:18px}
+.flogo img{height:64px}
+footer h4{font-family:"Barlow Condensed";text-transform:uppercase;color:#fff;font-size:1.25rem;margin-bottom:16px;letter-spacing:.03em}
+footer ul{list-style:none;display:grid;gap:9px}
+footer a:hover{color:var(--green-2)}
+.fbar{border-top:1px solid rgba(255,255,255,.08)}
+.fbar .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:22px 0}
+.fbar div div{display:flex;align-items:center;gap:12px;font-family:"Barlow Condensed";text-transform:uppercase;color:#fff;font-weight:600;font-size:1.05rem;line-height:1.15}
+.fbar svg{width:34px;height:34px;color:var(--green-2);flex:none}
+.copy{background:#040d19;text-align:center;padding:16px;font-size:.8rem;color:#7f8ea3}
+
+/* floating whatsapp */
+.wa{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.45);transition:transform .2s}
+.wa:hover{transform:scale(1.08)}
+.wa svg{width:32px;height:32px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* responsive */
+@media (max-width:980px){
+  .hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero .wrap{padding:56px 0 80px}
+  .badge{left:12px;bottom:-22px}
+  .grid6{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .safety .wrap{grid-template-columns:1fr;text-align:left}
+  .shield{width:140px}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  nav.menu{position:fixed;inset:78px 0 auto 0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:8px 16px 20px;border-bottom:1px solid var(--line);box-shadow:0 20px 30px -20px rgba(0,0,0,.3);transform:translateY(-130%);transition:transform .3s;z-index:-1}
+  nav.menu.open{transform:none}
+  nav.menu a:not(.btn){padding:14px 4px;border-bottom:1px solid var(--line)}
+  nav.menu .btn{margin-top:14px;justify-content:center}
+  .burger{display:block}
+  .pillars .wrap{grid-template-columns:1fr}
+  .pillar+.pillar{border-left:0;border-top:1px solid var(--line)}
+}
+@media (max-width:600px){
+  section{padding:68px 0}
+  .grid6,.steps,.row,.fgrid,.fbar .wrap{grid-template-columns:1fr}
+  .topbar .hide-sm{display:none}
+  .brand img{height:48px}
+  form.quote,.about-card{padding:26px}
+  .hero .ctas .btn{flex:1 1 100%;justify-content:center}
+  .topbar .wrap{justify-content:center}
+}
+
+/* multi-page */
+.page-hero{background:radial-gradient(900px 500px at 85% 0%,#1b4677 0%,transparent 60%),linear-gradient(135deg,var(--navy-3),var(--navy) 60%,var(--navy-2));color:#fff;padding:72px 0 80px;position:relative;overflow:hidden}
+.page-hero::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:linear-gradient(90deg,var(--green) 0 30%,var(--navy-2) 30% 100%)}
+.page-hero::before{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;border:40px solid rgba(108,191,63,.12)}
+.crumbs{font-size:.85rem;color:#93a6bf;margin-bottom:14px}
+.crumbs a{color:#c9d6e6}.crumbs a:hover{color:var(--green-2)}
+.page-hero h1{font-size:clamp(2.8rem,6vw,4.8rem);font-weight:800}
+.page-hero h1 span{color:var(--green-2)}
+.page-hero p{color:#c9d6e6;max-width:620px;margin-top:14px;font-size:1.05rem}
+nav.menu a.active:not(.btn){color:var(--green)}
+nav.menu a.active:not(.btn)::after{width:100%}
+.cta-strip{background:linear-gradient(120deg,var(--green),#3d8420);color:#fff;padding:56px 0}
+.cta-strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.cta-strip h2{font-size:clamp(2rem,4vw,2.8rem)}
+.cta-strip p{color:#e6f4dc;margin-top:6px}
+.cta-strip .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 24px -10px rgba(0,0,0,.4)}
+.more{margin-top:30px}
+.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.svc{display:flex;gap:22px;align-items:flex-start}
+.svc .ico{flex:none;margin-bottom:0}
+.svc ul{list-style:none;margin-top:12px;display:grid;gap:6px}
+.svc li{display:flex;gap:8px;font-size:.92rem;color:var(--ink)}
+.svc li svg{width:18px;height:18px;color:var(--green);flex:none;margin-top:3px}
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.panel{background:var(--soft);border:1px solid var(--line);border-radius:24px;padding:36px}
+.panel h3{font-size:1.8rem;color:var(--navy);margin-bottom:8px}
+@media (max-width:860px){.grid4,.split2{grid-template-columns:1fr}.svc{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 4-8 5-8-5V6l8 5 8-5z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.15-1.75-.86-2-.96-.28-.1-.48-.15-.68.15-.2.3-.78.96-.95 1.16-.18.2-.35.22-.65.07a8.1 8.1 0 0 1-2.4-1.48 9 9 0 0 1-1.66-2.07c-.17-.3 0-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12 21.8a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.98 1-3.63-.24-.37A9.8 9.8 0 1 1 12 21.8M20.5 3.5A11.8 11.8 0 0 0 1.9 17.7L.2 23.9l6.33-1.66A11.8 11.8 0 0 0 23.8 12a11.7 11.7 0 0 0-3.3-8.5"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5S5 10.2 5 15a7 7 0 0 0 14 0c0-4.8-7-12.5-7-12.5"/></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h11v9H3zm12 3h3.5L21 11v3h-6zM6.5 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4m11 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4M3 15h18v1.5H3z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.8-4.8 1.4 1.4z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m1 10.4 3.5 2.1-.8 1.3L11 13V7h2z"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 24 24"><path fill="currentColor" d="M12.7 6.2 9.5 9.4a1.5 1.5 0 0 0 2.1 2.1l1.4-1.4 5 5 1.3-1.3a1 1 0 0 0 .3-.7V7l-2-2zM2 8l3-3 4 1-2.9 2.9a3.5 3.5 0 0 0 4.9 5l.9-.9 4.4 4.4-1.4 1.4a1 1 0 0 1-1.4 0l-.3-.3-1 1a1.4 1.4 0 0 1-2 0l-.4-.4-.6.6a1.4 1.4 0 0 1-2 0z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7m0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5"/></symbol>
+  </defs>
+</svg>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="hide-sm"><svg><use href="#i-drop"/></svg> Good quality diesel &middot; Compliance to regulations &middot; High professionalism</span>
+    <span>
+      <a href="tel:+27732710004"><svg style="vertical-align:-2px"><use href="#i-phone"/></svg> 073 271 0004</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="tel:+27785586748">078 558 6748</a>
+    </span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="MS Scientific home"><img src="img/logo.png" alt="MS Scientific – Innovate for Life"></a>
+    <nav class="menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html" class="active">Industries</a>
+      <a href="safety.html">Safety</a>
+      <a href="contact.html" class="btn btn-green">Get a quote</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="page-hero">
+  <div class="wrap rv">
+    <div class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Industries</div>
+    <h1>Industries <span>we serve</span></h1>
+    <p>Construction, transport, manufacturing, agriculture, mining and power generation. Fuel for the sectors that can't stand still.</p>
+  </div>
+</section>
+<section class="industries" id="industries">
+  <div class="wrap">
+    <div class="head center rv">
+      <span class="eyebrow">Industries we serve</span>
+      <h2>Fuel for the work that <em>builds South Africa</em></h2>
+      <p>We supply diesel to the sectors that can't afford to stand still.</p>
+    </div>
+    <div class="grid6">
+      <div class="ind rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="currentColor"><path d="M6 34h22v6H6zM9 41a2.5 2.5 0 1 0 0 .1zm16 0a2.5 2.5 0 1 0 0 .1zM10 26h12v7H10zm12-2 10-12 2 1.6L25 25zm10-12 8 6-1.5 2-6.5-4.8zm6 6 1 6-4 3-1.6-1.8L37 25l-.6-4.4z"/></svg></div>
+        <h3>Construction</h3><p>Keep excavators, loaders, cranes and site generators fuelled so your project stays on schedule.</p>
+      </div>
+      <div class="ind rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="currentColor"><path d="M4 14h24v18H4zm26 6h7l6 6v6H30zM11 38a3.5 3.5 0 1 0 0-.1zm24 0a3.5 3.5 0 1 0 0-.1zM4 33h39v2H4z"/></svg></div>
+        <h3>Transport &amp; Logistics</h3><p>Dependable diesel for trucks and fleets, so your deliveries keep rolling and your routes stay on time.</p>
+      </div>
+      <div class="ind rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="currentColor"><path d="M6 40V22l9 6v-6l9 6v-6l9 6V10h6v30zM12 33h4v4h-4zm9 0h4v4h-4zm9 0h4v4h-4zM34 4h4v5h-4zm-1 6c0-2 1-3 3-3"/></svg></div>
+        <h3>Manufacturing</h3><p>Steady fuel supply for boilers, forklifts and backup power to protect your production line.</p>
+      </div>
+      <div class="ind rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="currentColor"><path d="M12 14h12l3 10h9a3 3 0 0 1 3 3v5h-6a6 6 0 0 0-11 0h-6.2A8 8 0 0 0 8 28.5V20h4zm3 3v7h9l-2-7zM12 31a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11m0 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4M33 34a4 4 0 1 0 0 8 4 4 0 0 0 0-8M34 16h3v8h-3z"/></svg></div>
+        <h3>Agriculture</h3><p>On-farm delivery for tractors, harvesters, irrigation pumps and generators, right when the season demands it.</p>
+      </div>
+      <div class="ind rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="currentColor"><path d="M14 16c1-4 4-6 7-5 2-3 6-3 8 0 3-1 6 1 6 5zM8 18h32l-4 14H12zm3 17a3.5 3.5 0 1 0 0 .1zm26 0a3.5 3.5 0 1 0 0 .1zM14 35h20v2H14z"/></svg></div>
+        <h3>Mining</h3><p>Bulk diesel for haul trucks, drill rigs and heavy plant in demanding, around-the-clock operations.</p>
+      </div>
+      <div class="ind rv">
+        <div class="ico"><svg viewBox="0 0 48 48" fill="currentColor"><path d="M8 8h28v24H8zm3 3v18h22V11zm12 1-7 10h5l-2 7 8-11h-5zM10 34h4v4h-4zm20 0h4v4h-4zM36 18h4v6h-4zm4 1h4v4h-4z"/></svg></div>
+        <h3>Power Generation</h3><p>Keep the lights on through load-shedding and outages with reliable fuel for standby and prime-power generators.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="banner"><p>Powering your business. <span>Delivering performance.</span></p></div>
+
+<section class="cta-strip">
+  <div class="wrap">
+    <div class="rv"><h2>Need diesel delivered?</h2><p>Tell us how many litres and where. We'll send a quick, clear quote.</p></div>
+    <div class="ctas rv">
+      <a href="contact.html" class="btn btn-white"><svg><use href="#i-drop"/></svg> Request a quote</a>
+      <a href="tel:+27732710004" class="btn btn-ghost"><svg><use href="#i-phone"/></svg> 073 271 0004</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <div class="flogo"><img src="img/logo.png" alt="MS Scientific"></div>
+      <p>Reliable diesel supply for construction, transport, manufacturing, agriculture, mining and power generation.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul><li><a href="about.html">About us</a></li><li><a href="industries.html">Industries</a></li><li><a href="services.html">Services</a></li><li><a href="safety.html">Safety</a></li><li><a href="contact.html">Get a quote</a></li></ul>
+    </div>
+    <div>
+      <h4>Industries</h4>
+      <ul><li><a href="industries.html">Construction</a></li><li><a href="industries.html">Transport &amp; Logistics</a></li><li><a href="industries.html">Manufacturing</a></li><li><a href="industries.html">Agriculture</a></li><li><a href="industries.html">Mining</a></li><li><a href="industries.html">Power Generation</a></li></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+27732710004">073 271 0004</a></li>
+        <li><a href="tel:+27785586748">078 558 6748</a></li>
+        <li><a href="mailto:Thabasekgodi@gmail.com">Thabasekgodi@gmail.com</a></li>
+        <li><a href="mailto:ThusoSegodi@gmail.com">ThusoSegodi@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="fbar">
+    <div class="wrap">
+      <div><div><svg><use href="#i-truck"/></svg>Reliable supply<br>you can count on</div></div>
+      <div><div><svg><use href="#i-hand"/></svg>Committed to<br>your success</div></div>
+      <div><div><svg><use href="#i-shield"/></svg>Safe &bull; Efficient &bull;<br>On time</div></div>
+    </div>
+  </div>
+  <div class="copy">&copy; <span id="yr">2026</span> MS Scientific &middot; Innovate for Life &middot; All rights reserved.</div>
+</footer>
+
+<a class="wa" href="https://wa.me/27732710004?text=Hi%20MS%20Scientific%2C%20I%27d%20like%20a%20diesel%20quote." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
+<script>
+const CONFIG = { whatsapp: "27732710004", emails: ["Thabasekgodi@gmail.com", "ThusoSegodi@gmail.com"] };
+
+document.getElementById("yr").textContent = new Date().getFullYear();
+
+// mobile menu
+const menu = document.getElementById("menu"), burger = document.getElementById("burger");
+burger.addEventListener("click", () => {
+  const open = menu.classList.toggle("open");
+  burger.setAttribute("aria-expanded", open);
+});
+menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => { menu.classList.remove("open"); burger.setAttribute("aria-expanded", false); }));
+
+// scroll reveal
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+}), { threshold: .12 }) : null;
+document.querySelectorAll(".rv").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+
+// quote form -> WhatsApp or email
+const form = document.getElementById("quote") || document.createElement("form");
+let via = "wa";
+form.querySelectorAll("button[data-via]").forEach(b => b.addEventListener("click", () => via = b.dataset.via));
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  const req = ["q-name", "q-phone", "q-litres", "q-loc"];
+  const missing = req.filter(id => !v(id));
+  req.forEach(id => document.getElementById(id).style.borderColor = missing.includes(id) ? "#d64545" : "");
+  const note = document.getElementById("q-note");
+  if (missing.length) { note.textContent = "Please fill in the required fields marked *."; note.style.color = "#d64545"; document.getElementById(missing[0]).focus(); return; }
+  note.textContent = "* Required fields"; note.style.color = "";
+  const lines = [
+    "DIESEL QUOTE REQUEST",
+    "Name: " + v("q-name"),
+    v("q-co") && "Company: " + v("q-co"),
+    "Phone: " + v("q-phone"),
+    v("q-ind") && "Industry: " + v("q-ind"),
+    "Litres: " + v("q-litres"),
+    "Delivery: " + v("q-freq"),
+    "Location: " + v("q-loc"),
+    v("q-msg") && "Notes: " + v("q-msg")
+  ].filter(Boolean).join("\n");
+  if (via === "wa") window.open("https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(lines), "_blank", "noopener");
+  else location.href = "mailto:" + CONFIG.emails.join(",") + "?subject=" + encodeURIComponent("Diesel quote request – " + v("q-name")) + "&body=" + encodeURIComponent(lines);
+});
+</script>
+</body>
+</html>

@@ -222,6 +222,36 @@ footer a:hover{color:var(--green-2)}
   .hero .ctas .btn{flex:1 1 100%;justify-content:center}
   .topbar .wrap{justify-content:center}
 }
+
+/* multi-page */
+.page-hero{background:radial-gradient(900px 500px at 85% 0%,#1b4677 0%,transparent 60%),linear-gradient(135deg,var(--navy-3),var(--navy) 60%,var(--navy-2));color:#fff;padding:72px 0 80px;position:relative;overflow:hidden}
+.page-hero::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:linear-gradient(90deg,var(--green) 0 30%,var(--navy-2) 30% 100%)}
+.page-hero::before{content:"";position:absolute;right:-80px;top:-80px;width:320px;height:320px;border-radius:50%;border:40px solid rgba(108,191,63,.12)}
+.crumbs{font-size:.85rem;color:#93a6bf;margin-bottom:14px}
+.crumbs a{color:#c9d6e6}.crumbs a:hover{color:var(--green-2)}
+.page-hero h1{font-size:clamp(2.8rem,6vw,4.8rem);font-weight:800}
+.page-hero h1 span{color:var(--green-2)}
+.page-hero p{color:#c9d6e6;max-width:620px;margin-top:14px;font-size:1.05rem}
+nav.menu a.active:not(.btn){color:var(--green)}
+nav.menu a.active:not(.btn)::after{width:100%}
+.cta-strip{background:linear-gradient(120deg,var(--green),#3d8420);color:#fff;padding:56px 0}
+.cta-strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap}
+.cta-strip h2{font-size:clamp(2rem,4vw,2.8rem)}
+.cta-strip p{color:#e6f4dc;margin-top:6px}
+.cta-strip .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 24px -10px rgba(0,0,0,.4)}
+.more{margin-top:30px}
+.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.svc{display:flex;gap:22px;align-items:flex-start}
+.svc .ico{flex:none;margin-bottom:0}
+.svc ul{list-style:none;margin-top:12px;display:grid;gap:6px}
+.svc li{display:flex;gap:8px;font-size:.92rem;color:var(--ink)}
+.svc li svg{width:18px;height:18px;color:var(--green);flex:none;margin-top:3px}
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.panel{background:var(--soft);border:1px solid var(--line);border-radius:24px;padding:36px}
+.panel h3{font-size:1.8rem;color:var(--navy);margin-bottom:8px}
+@media (max-width:860px){.grid4,.split2{grid-template-columns:1fr}.svc{flex-direction:column}}
 </style>
 </head>
 <body>
@@ -254,13 +284,14 @@ footer a:hover{color:var(--green-2)}
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="MS Scientific home"><img src="img/logo.png" alt="MS Scientific – Innovate for Life"></a>
+    <a class="brand" href="index.html" aria-label="MS Scientific home"><img src="img/logo.png" alt="MS Scientific – Innovate for Life"></a>
     <nav class="menu" id="menu">
-      <a href="#about">About</a>
-      <a href="#industries">Industries</a>
-      <a href="#process">How it works</a>
-      <a href="#safety">Safety</a>
-      <a href="#contact" class="btn btn-green">Get a quote</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="safety.html">Safety</a>
+      <a href="contact.html" class="btn btn-green">Get a quote</a>
     </nav>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
       <svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -278,7 +309,7 @@ footer a:hover{color:var(--green-2)}
       <div class="tag">Reliable supply for your business</div>
       <p class="lead">We deliver high-quality diesel with reliability, safety and efficiency you can count on. On time. Every time. Bulk and scheduled deliveries straight to your site, fleet or plant.</p>
       <div class="ctas">
-        <a href="#contact" class="btn btn-green"><svg><use href="#i-drop"/></svg> Request a quote</a>
+        <a href="contact.html" class="btn btn-green"><svg><use href="#i-drop"/></svg> Request a quote</a>
         <a href="tel:+27732710004" class="btn btn-ghost"><svg><use href="#i-phone"/></svg> 073 271 0004</a>
       </div>
     </div>
@@ -322,6 +353,7 @@ footer a:hover{color:var(--green-2)}
         <li><svg><use href="#i-check"/></svg><span><b>Safe handling, reliable delivery</b> by a team that treats fuel with the respect it demands.</span></li>
         <li><svg><use href="#i-check"/></svg><span><b>Committed to your success</b>, so less downtime for you and more time getting work done.</span></li>
       </ul>
+      <a href="about.html" class="btn btn-navy more">More about us</a>
     </div>
     <div class="about-card rv">
       <div class="drop"><svg style="color:var(--green)"><use href="#i-drop"/></svg></div>
@@ -378,7 +410,7 @@ footer a:hover{color:var(--green-2)}
       <p>No complicated paperwork. Just tell us what you need and where you need it.</p>
     </div>
     <div class="steps">
-      <div class="step rv"><h3>Contact us</h3><p>Call, WhatsApp, email or send the quote form below with your volume and location.</p></div>
+      <div class="step rv"><h3>Contact us</h3><p>Call, WhatsApp, email or send our <a href="contact.html" style="color:var(--green);font-weight:600">quote form</a> with your volume and location.</p></div>
       <div class="step rv"><h3>Get your quote</h3><p>We confirm pricing, quantity and the best delivery window for your operation.</p></div>
       <div class="step rv"><h3>We deliver</h3><p>Our tanker brings good-quality diesel safely and on time to your site, tanks or fleet.</p></div>
       <div class="step rv"><h3>Stay supplied</h3><p>Set up regular, scheduled deliveries so you never run dry again.</p></div>
@@ -386,70 +418,13 @@ footer a:hover{color:var(--green-2)}
   </div>
 </section>
 
-<section class="safety" id="safety">
+<section class="cta-strip">
   <div class="wrap">
-    <svg class="shield rv" viewBox="0 0 200 230" aria-hidden="true">
-      <path d="M100 6 186 36v70c0 58-38 102-86 118C52 208 14 164 14 106V36z" fill="#0c2340" stroke="#6cbf3f" stroke-width="8"/>
-      <path d="M100 26 168 50v56c0 46-29 82-68 96-39-14-68-50-68-96V50z" fill="none" stroke="#1d4a7c" stroke-width="5"/>
-      <circle cx="100" cy="112" r="44" fill="#fff"/>
-      <path d="M100 78s-24 26-24 42a24 24 0 0 0 48 0c0-16-24-42-24-42" fill="#4f9d2d"/>
-      <path d="M90 118a10 10 0 0 0 10 12" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
-    </svg>
-    <div class="rv">
-      <span class="eyebrow" style="color:var(--green-2)">Safety &amp; compliance</span>
-      <h2>Safe handling. Reliable delivery. <span>Your trusted fuel partner.</span></h2>
-      <p>Diesel is a hazardous product, and we treat it that way. Our vehicles are clearly marked and equipped for fuel transport, and every delivery is carried out with care for your people, your property and the environment.</p>
-      <div class="chips">
-        <span class="chip"><svg><use href="#i-shield"/></svg> Regulatory compliance</span>
-        <span class="chip"><svg><use href="#i-truck"/></svg> Marked fuel tankers</span>
-        <span class="chip"><svg><use href="#i-drop"/></svg> Quality-controlled fuel</span>
-        <span class="chip"><svg><use href="#i-clock"/></svg> On-time delivery</span>
-      </div>
+    <div class="rv"><h2>Need diesel delivered?</h2><p>Tell us how many litres and where. We'll send a quick, clear quote.</p></div>
+    <div class="ctas rv">
+      <a href="contact.html" class="btn btn-white"><svg><use href="#i-drop"/></svg> Request a quote</a>
+      <a href="tel:+27732710004" class="btn btn-ghost"><svg><use href="#i-phone"/></svg> 073 271 0004</a>
     </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="cinfo rv">
-      <span class="eyebrow">Get in touch</span>
-      <h2>Contact us today</h2>
-      <p>Need diesel for your site, fleet or generator? Speak to us directly. We'll give you a quick, clear quote.</p>
-      <div class="clist">
-        <a class="citem" href="tel:+27732710004"><span class="ci"><svg><use href="#i-phone"/></svg></span><span><small>Call / WhatsApp</small><b>073 271 0004</b></span></a>
-        <a class="citem" href="tel:+27785586748"><span class="ci"><svg><use href="#i-phone"/></svg></span><span><small>Call</small><b>078 558 6748</b></span></a>
-        <a class="citem" href="mailto:Thabasekgodi@gmail.com"><span class="ci"><svg><use href="#i-mail"/></svg></span><span><small>Email</small><b>Thabasekgodi@gmail.com</b></span></a>
-        <a class="citem" href="mailto:ThusoSegodi@gmail.com"><span class="ci"><svg><use href="#i-mail"/></svg></span><span><small>Email</small><b>ThusoSegodi@gmail.com</b></span></a>
-      </div>
-    </div>
-
-    <form class="quote rv" id="quote" novalidate>
-      <h3>Request a diesel quote</h3>
-      <p>Fill this in and send it to us on WhatsApp or email. We'll get back to you quickly.</p>
-      <div class="row">
-        <div class="field"><label for="q-name">Full name *</label><input id="q-name" required autocomplete="name"></div>
-        <div class="field"><label for="q-co">Company</label><input id="q-co" autocomplete="organization"></div>
-      </div>
-      <div class="row">
-        <div class="field"><label for="q-phone">Phone *</label><input id="q-phone" type="tel" required autocomplete="tel"></div>
-        <div class="field"><label for="q-ind">Industry</label>
-          <select id="q-ind"><option value="">Select…</option><option>Construction</option><option>Transport &amp; Logistics</option><option>Manufacturing</option><option>Agriculture</option><option>Mining</option><option>Power Generation</option><option>Other</option></select>
-        </div>
-      </div>
-      <div class="row">
-        <div class="field"><label for="q-litres">Litres needed *</label><input id="q-litres" type="number" min="1" inputmode="numeric" required placeholder="e.g. 5000"></div>
-        <div class="field"><label for="q-freq">Delivery</label>
-          <select id="q-freq"><option>Once-off</option><option>Weekly</option><option>Monthly</option><option>As needed</option></select>
-        </div>
-      </div>
-      <div class="field"><label for="q-loc">Delivery location *</label><input id="q-loc" required placeholder="Town / site address"></div>
-      <div class="field"><label for="q-msg">Anything else?</label><textarea id="q-msg" placeholder="Preferred date, site access, tank size…"></textarea></div>
-      <div class="fbtns">
-        <button type="submit" class="btn btn-green" data-via="wa"><svg><use href="#i-wa"/></svg> Send via WhatsApp</button>
-        <button type="submit" class="btn btn-navy" data-via="mail"><svg><use href="#i-mail"/></svg> Send via email</button>
-      </div>
-      <p class="note" id="q-note">* Required fields</p>
-    </form>
   </div>
 </section>
 
@@ -463,11 +438,11 @@ footer a:hover{color:var(--green-2)}
     </div>
     <div>
       <h4>Explore</h4>
-      <ul><li><a href="#about">About us</a></li><li><a href="#industries">Industries</a></li><li><a href="#process">How it works</a></li><li><a href="#safety">Safety</a></li><li><a href="#contact">Get a quote</a></li></ul>
+      <ul><li><a href="about.html">About us</a></li><li><a href="industries.html">Industries</a></li><li><a href="services.html">Services</a></li><li><a href="safety.html">Safety</a></li><li><a href="contact.html">Get a quote</a></li></ul>
     </div>
     <div>
       <h4>Industries</h4>
-      <ul><li>Construction</li><li>Transport &amp; Logistics</li><li>Manufacturing</li><li>Agriculture</li><li>Mining</li><li>Power Generation</li></ul>
+      <ul><li><a href="industries.html">Construction</a></li><li><a href="industries.html">Transport &amp; Logistics</a></li><li><a href="industries.html">Manufacturing</a></li><li><a href="industries.html">Agriculture</a></li><li><a href="industries.html">Mining</a></li><li><a href="industries.html">Power Generation</a></li></ul>
     </div>
     <div>
       <h4>Contact</h4>
@@ -511,7 +486,7 @@ const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.
 document.querySelectorAll(".rv").forEach(el => io ? io.observe(el) : el.classList.add("in"));
 
 // quote form -> WhatsApp or email
-const form = document.getElementById("quote");
+const form = document.getElementById("quote") || document.createElement("form");
 let via = "wa";
 form.querySelectorAll("button[data-via]").forEach(b => b.addEventListener("click", () => via = b.dataset.via));
 form.addEventListener("submit", e => {
